@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <center><h1><u>BUSCADOR: </u></h1></center>
+    <center>
+    <form action="" method="get">
+
+        <label for="">Ingrese la marca: </label>
+        <input type="text" name = "buscar">
+
+        <select name="palanca" id="">
+            <option value="autos">Auto</option>
+            <option value="motos">Moto</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+    </center>
+    <hr>
+    {% if buscados %}
+    <table border="1">
+
+        <tr>
+            <td>Marca</td>
+            <td>Modelo</td>
+        </tr>
+
+        {% for i in buscados %}
+        <tr>
+            <td>{{i.marca}}</td>
+            <td>{{i.modelo}}</td>
+        </tr>
+        
+        {% endfor %}
+
+    </table>
+    {% endif %}
+    </table>
+</html>

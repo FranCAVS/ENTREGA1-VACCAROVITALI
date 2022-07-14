@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1><u><center>LISTA DE MOTOS</center></u></h1>
+    {% for i in motos %}
+    <ul>
+        <li><u>Moto</u>: {{i.marca}} {{i.modelo}}</li>
+    </ul>
+    {% endfor %}
+    <a href="/APP/crear-motos/"><input type="button" value="Crear moto"></a>
+</body>
+</html>
